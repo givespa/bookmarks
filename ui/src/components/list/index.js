@@ -3,7 +3,7 @@ export const BookmarkList = ({ bookmarks }) => (
     <div className="row">
       {bookmarks.length > 0 &&
         bookmarks.map((bookmark, index) => (
-          <div className="col-md-3" key={index} href={bookmark.link}>
+          <div className="col-md-4 mb-4" key={index} href={bookmark.link}>
             <div className="card">
               <div className="card-body">
                 <p className="card-text">
