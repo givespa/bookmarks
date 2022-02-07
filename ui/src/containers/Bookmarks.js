@@ -23,8 +23,10 @@ export const Bookmarks = () => {
 
   return (
     <>
-      <BookmarkForm />
-      <BookmarkList bookmarks={bookmarks} />
+      <div className="container mt-5">
+        <BookmarkForm />
+        <BookmarkList bookmarks={bookmarks} />
+      </div>
     </>
   );
 };
