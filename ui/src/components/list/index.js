@@ -6,7 +6,7 @@ export const BookmarkList = ({ bookmarks }) => (
           <div className="col-md-4 mb-4" key={index} href={bookmark.link}>
             <div className="card">
               <div className="card-body">
-                <p className="card-text">
+                <p className="card-text text-center">
                   <a
                     href={bookmark.link}
                     style={{ textDecoration: 'none' }}
