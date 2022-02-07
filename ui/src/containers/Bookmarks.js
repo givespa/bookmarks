@@ -13,6 +13,14 @@ export const Bookmarks = () => {
     setBookmarks(response.data.bookmarks);
   };
 
+  const addBookmark = async (bookmark) => {
+    const response = await axios.post(
+      'http://localhost:3001/bookmarks',
+      bookmark
+    );
+    setBookmarks([...bookmarks, response.data.newBookmark]);
+  };
+
   useEffect(() => {
     getBookmarks();
 
@@ -24,7 +32,7 @@ export const Bookmarks = () => {
   return (
     <>
       <div className="container mt-5">
-        <BookmarkForm />
+        <BookmarkForm addBookmark={addBookmark} />
         <BookmarkList bookmarks={bookmarks} />
       </div>
     </>
